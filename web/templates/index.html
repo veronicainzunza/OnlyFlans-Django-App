@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block titulopestana %}Bienvenido a onlyflans{% endblock %}
+
+
+
+{% block contenido %}
+<div class="container">
+    <!--<div class="row justify-content-center mb-5">
+        <div class="col-12 col-md-8">
+            <div class="card text-center bg-light p-4">
+                <h4>Bienvenido, {{ user.username }}!</h4>
+                <p class="mb-2">Tenemos una lista de productos exclusivos para ti, ¿Quieres conocer más?</p>
+                <a href="{% url 'contacto' %}" class="btn btn-primary" style="background-color: rgb(79, 109, 150);">Contáctanos</a>
+            </div>
+        </div>
+    </div>-->
+    <div class="container-fluid" style="background-color: #DAA520;">
+        <div class="container text-center py-3 mb-5">
+            <h4>Bienvenido, {{ user.username }}!</h4>
+            <p class="mb-2">Tenemos una lista de productos exclusivos para ti, ¿Quieres conocer más?</p>
+            <a href="{% url 'contacto' %}" class="btn btn-primary" style="background-color: #524629;">Contáctanos</a>
+        </div>    
+    </div>
+    
+ 
+    <div class="row">
+        {% for flan in flanes %}
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <!--<img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">-->
+                    <a href="{% url 'detalle_flan' flan.id %}">
+                        <img src="{{ flan.image_url }}" class="card-img-top fixed-size" alt="{{ flan.name }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ flan.name }}</h5>
+                        <p class="card-text">{{ flan.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

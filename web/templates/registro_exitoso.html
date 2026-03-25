@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titulopestana %}Bienvenido a onlyflans{% endblock %}
+
+{% block contenido %}
+<div class="col-5 shadow mx-auto text-center pb-5 my-5">
+    <!--<div class="h1 fw-semibold py-3" style="background-color: #DAA520;">Consulta Recibida Exitosamente</div>-->
+
+    <div class="fs-2 pt-5 pb-4" style="background-color: #DAA520;">
+        <h1>Consulta Recibida Exitosamente</h1>
+        <h3>Gracias por contactarte con OnlyFlans, te responderemos en breve</h3>
+    </div>
+    <div class="pt-4 pb-2">
+        <a class="btn btn-info fw-bold" style="background-color: #DAA520;" href="{% url 'index' %}">Volver al Inicio</a>
+ 
+    </div>
+</div>
+{% endblock %}
+
+

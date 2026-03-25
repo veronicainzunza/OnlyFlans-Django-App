@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulopestana %}Cerrar sesión{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <h2>Has cerrado sesión correctamente</h2>
+    <a href="{% url 'index' %}">Ir al inicio</a>
+    <!--<a href="{% url 'login' %}" class="btn btn-primary mt-3">Iniciar sesión nuevamente</a>-->
+</div>
+{% endblock %}
+
+
+
+
+
