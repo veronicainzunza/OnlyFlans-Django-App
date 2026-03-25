@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\v_inz\OneDrive\Escritorio\Proyecto_Django\venv'
+set -gx VIRTUAL_ENV 'C:\Users\v_inz\Downloads\Posibles_Proyectos_Para_Portafolio\OnlyFlans-Django-App\venv'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"Scripts $PATH
