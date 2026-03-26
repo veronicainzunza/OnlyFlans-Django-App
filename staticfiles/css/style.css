@@ -1,5 +1,5 @@
 /* Globales */
-body{ background-image: url("http://127.0.0.1:8000/static/img/madera.jpg"), url("http://127.0.0.1:8000/static/img/madera.jpg");background-color:#F7F3E3;}
+body{ background-image: url("/static/img/madera.jpg"),url("/static/img/madera.jpg");background-color:#F7F3E3;}
 
 /*.bg-flan {background-color:#FEF9F6;}
 .navbar {--bs-navbar-padding-y: 1rem;}*/
