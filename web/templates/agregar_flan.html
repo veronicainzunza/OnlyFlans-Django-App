@@ -23,12 +23,15 @@
 {% block contenido %}
     <div class="container mt-5">
         <h1 class="mb-4">Agregar Flan</h1>
-        <form method="post" class="row g-3">
+        <!-- <form method="post" class="row g-3"> -->
+        <form method="post" enctype="multipart/form-data" class="row g-3">
             {% csrf_token %}
+            {% comment %}
             <div class="col-md-6">
                 <label for="id_flan_uuid" class="form-label"></label>
                 {{ form.flan_uuid|as_crispy_field }}
             </div>
+            {% endcomment %}
             <div class="col-md-6">
                 <label for="id_name" class="form-label"></label>
                 {{ form.name|as_crispy_field }}
@@ -39,7 +42,7 @@
             </div>
             <div class="col-md-12">
                 <label for="id_image_url" class="form-label"></label>
-                {{ form.image_url|as_crispy_field }}
+                {{ form.image|as_crispy_field }}
             </div>
             <div class="col-md-6">
                 <label for="id_slug" class="form-label"></label>

@@ -4,7 +4,8 @@ from .models import Flan, ContactForm
 # Register your models here.
 @admin.register(Flan)
 class FlanAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'image_url', 'slug','is_private')
+    # list_display = ('name', 'description', 'image_url', 'slug','is_private')
+    list_display = ('name', 'description', 'image', 'slug','is_private')
     search_fields = ('name','slug')
     list_filter = ('name','slug')
 

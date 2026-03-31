@@ -14,10 +14,16 @@ class ContactFormForm(forms.ModelForm):
 #    customer_name = forms.CharField(max_length=64, label='Nombre (forms.Form)', widget = forms.TextInput(attrs={'style': 'width: 95%;'}))
 #    message = forms.CharField(label ='Mensaje (forms.Form)', widget = forms.Textarea(attrs = {'style': 'width: 95%; height: 150px;'}))
     
+# class ContactFormModelForm(forms.ModelForm):
+#     class Meta:
+#         model = ContactForm
+#         fields = "__all__"
+
 class ContactFormModelForm(forms.ModelForm):
     class Meta:
         model = ContactForm
-        fields = "__all__"
+        fields = ['customer_email', 'customer_name', 'message']
+
         # fields = ("customer_email", "customer_name", "message")
         
         widgets ={
@@ -34,7 +40,8 @@ class ContactFormModelForm(forms.ModelForm):
 class FlanForm(forms.ModelForm):
     class Meta:
         model = Flan
-        fields = ['flan_uuid', 'name', 'description', 'image_url', 'slug', 'is_private']
+        fields = ['name', 'description', 'image', 'slug', 'is_private']
+        # fields = ['flan_uuid', 'name', 'description', 'image_url', 'slug', 'is_private']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
